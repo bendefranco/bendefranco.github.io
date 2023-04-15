@@ -3,25 +3,299 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ben De Franco Online Teaching Portfolio">
+        <meta name="keywords" content="Ben De Franco bendefranco ben.defranco csv music history teacher teaching">
+        <meta name="author" content="Ben De Franco">
 
         <title>BenDeFranco-Home</title>
         <link rel="stylesheet" type="text/css" href="./static/css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Schoolbell">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+              crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/48fcb9931e.js" crossorigin="anonymous"></script>
     </head>
     <body class="main-body">
-        <div class="hero-image">
+        <div id="home" class="hero-image">
             <div class="hero-text">
                 <h1>Hi, I'm Ben De Franco!</h1>
                 <p>I'm a Music & History Teacher</p>
-                <button onclick="window.location.href='./html/lesson_plans.html';">
-                    Lesson Plans
-                </button>
-                <button onclick="window.location.href='./html/unit_plans.html';">
-                    Unit Plans
-                </button>
-                <button onclick="window.location.href='./html/about_me.html';">
-                    About Me
-                </button>
+                <button onclick="window.location.href='#about-me';">About Me</button>
+                <button onclick="window.location.href='#resume';">Resume</button>
+                <button onclick="window.location.href='#documents';">Unit/Lesson Plans</button>
+            </div>
+        </div>
+        <div class="rest-of-page">
+            <header class="sticky-top">
+                <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#home">
+                            Ben De Franco
+                            <img alt="Logo" src="./static/images/logo.png" width="25px">
+                        </a>
+                        <button class="navbar-toggler navbar-toggler-right" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbar1">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item" style="padding:5px">
+                                    <a class="btn btn-primary btn-m" href="#about-me" role="button">About Me</a>
+                                </li>
+                                <li class="nav-item" style="padding:5px">
+                                    <a class="btn btn-primary btn-m" href="#resume" role="button">Resume</a>
+                                </li>
+                                <li class="nav-item" style="padding:5px">
+                                    <a class="btn btn-primary btn-m" href="#documents" role="button">Unit/Lesson Plans</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div id="about-me" class="div-block">
+                <div class="header-section">
+                    <h1 class="header-text">About Me</h1>
+                </div>
+                <div class="content-section">
+                    <main id="main-section" class="div-block row">
+                        <aside class="col-md-4">
+                            <img class="ml-2" src="../static/images/profile-photo.png" width="100%">
+                        </aside>
+
+                        <article class="col-md-8">
+                            <div class="centered">
+                                <h2 class="website-xxlarge"> Hello! Welcome To My Website!</h2>
+                                <br>
+                                <p class="website-large">
+                                    I'm a computer science graduate and have recently started my career by working on multiple
+                                    backend projects from fixing and adding new features to a central API, to a load balance testing
+                                    application to partner integrations.
+                                    <br><br>
+                                    On my spare time and during hackathon events, I have worked on web applications and other
+                                    frontend applications.
+                                    <br><br>
+                                </p>
+                                <button>
+                                    <a href="../static/documents/resume.pdf" target="_blank"  class="no-decoration">
+                                        <div class="panel website-xlarge">
+                                            <i class="fas fa-download website-xxlarge"></i>
+                                            Download My Resume
+                                        </div>
+                                    </a>
+                                </button>
+                            </div>
+                        </article>
+                    </main>
+                </div>
+            </div>
+            <div id="documents" class="div-block">
+                <div class="header-section">
+                    <h1 class="header-text">Unit/Lesson Plans</h1>
+                </div>
+                <div class="content-section">
+                    <div class="documents row justify-content-center">
+                        <div id="baroque-music-history" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Baroque Music History</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade9-badge">Grade: 9</span>
+                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Learning about Baroque stuff.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Baroque_Music_History.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="renaissance-music-history" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Renaissance Music History</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade9-badge">Grade: 9</span>
+                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Learning about Renaissance stuff.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Renaissance_Music_History.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="music-intervals" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Music Intervals</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge unitPlan-badge">Type: Unit Plan</span>
+                                            <span class="badge grade9-badge">Grade: 9</span>
+                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Grade 9 theory program
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Music_Intervals.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="major-scales" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Major Scales</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade10-badge">Grade: 10</span>
+                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Students will be able to identify a major scale by sound and seeing it notated.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Major_Scales.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chamber-music" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Chamber Music</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge unitPlan-badge">Type: Unit Plan</span>
+                                            <span class="badge grade11-badge">Grade: 11</span>
+                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Identify some famous small ensemble pieces throughout history.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Chamber_Music.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chamber-ensembles-history" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Chamber Ensembles History</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade10-badge">Grade: 10</span>
+                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Identify some famous small ensemble pieces throughout history.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Chamber_Ensembles_History.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fort-york-history" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Fort York History</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade7-badge">Grade: 7</span>
+                                            <span class="badge history-badge">History <i class="fas fa-landmark"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            Investigate elements of Fort York and discover various artifacts that were used here during the War of 1812.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Fort_York_History.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ring-of-fire-dynamics" class="ml-2">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Ring Of Fire Dynamics</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade10-badge">Grade: 10</span>
+                                            <span class="badge grade11-badge">Grade: 11</span>
+                                            <span class="badge music-badge">History <i class="fas fa-music"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            By the end of this lesson students will be able to play dynamics and Crescendos and Decrescendos.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/Ring_Of_Fire_Dynamics.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="resume"  class="header-section">
+                <h1 class="header-text">Resume</h1>
+            </div>
+            <div class="content-section">
+
+                Resume Stuff
             </div>
         </div>
     </body>
