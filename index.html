@@ -7,7 +7,7 @@
         <meta name="keywords" content="Ben De Franco bendefranco ben.defranco csv music history teacher teaching">
         <meta name="author" content="Ben De Franco">
 
-        <title>BenDeFranco-Home</title>
+        <title>Ben De Franco</title>
         <link rel="stylesheet" type="text/css" href="./static/css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Schoolbell">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -21,7 +21,6 @@
                 <h1>Hi, I'm Ben De Franco!</h1>
                 <p>I'm a Music & History Teacher</p>
                 <button onclick="window.location.href='#about-me';">About Me</button>
-                <button onclick="window.location.href='#resume';">Resume</button>
                 <button onclick="window.location.href='#documents';">Unit/Lesson Plans</button>
             </div>
         </div>
@@ -29,7 +28,7 @@
             <header class="sticky-top">
                 <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#home">
+                        <a class="navbar-brand ml-1" href="#home">
                             Ben De Franco
                             <img alt="Logo" src="./static/images/logo.png" width="25px">
                         </a>
@@ -42,9 +41,6 @@
                                     <a class="btn btn-primary btn-m" href="#about-me" role="button">About Me</a>
                                 </li>
                                 <li class="nav-item" style="padding:5px">
-                                    <a class="btn btn-primary btn-m" href="#resume" role="button">Resume</a>
-                                </li>
-                                <li class="nav-item" style="padding:5px">
                                     <a class="btn btn-primary btn-m" href="#documents" role="button">Unit/Lesson Plans</a>
                                 </li>
                             </ul>
@@ -52,27 +48,24 @@
                     </div>
                 </nav>
             </header>
-            <div id="about-me" class="div-block">
-                <div class="header-section">
+            <div id="about-me" class="div-block col-12">
+                <div class="header-section centered col-12">
                     <h1 class="header-text">About Me</h1>
                 </div>
                 <div class="content-section">
-                    <main id="main-section" class="div-block row">
-                        <aside class="col-md-4">
-                            <img class="ml-2" src="../static/images/profile-photo.png" width="100%">
+                    <main id="main-about-me-section" class="div-block row">
+                        <aside class="col-4">
+                            <img class="pb-2" src="../static/images/york-profile-photo.jpg" width="100%">
                         </aside>
 
-                        <article class="col-md-8">
+                        <article class="col-8">
                             <div class="centered">
                                 <h2 class="website-xxlarge"> Hello! Welcome To My Website!</h2>
                                 <br>
                                 <p class="website-large">
-                                    I'm a computer science graduate and have recently started my career by working on multiple
-                                    backend projects from fixing and adding new features to a central API, to a load balance testing
-                                    application to partner integrations.
+                                    I'm a huge leafs fan, and I love teaching kids both music and history.
                                     <br><br>
-                                    On my spare time and during hackathon events, I have worked on web applications and other
-                                    frontend applications.
+                                    And I do other stuff too.
                                     <br><br>
                                 </p>
                                 <button>
@@ -84,203 +77,284 @@
                                     </a>
                                 </button>
                             </div>
+                            <div class="col-12">
+                                <div class="row centered">
+                                    <div class="col">
+                                        <img class="pb-2" src="../static/images/firstaid_badge.png" width="50%">
+                                    </div>
+                                    <div class="col">
+                                        <img class="pb-2" src="../static/images/highfive_badge.png" width="50%">
+                                    </div>
+                                    <div class="col">
+                                        <img class="pb-2" src="../static/images/yep_badge.png" width="50%">
+                                    </div>
+                                </div>
+                            </div>
                         </article>
                     </main>
                 </div>
             </div>
-            <div id="documents" class="div-block">
-                <div class="header-section">
+            <div id="documents" class="div-block col-12">
+                <div class="header-section centered col-12">
                     <h1 class="header-text">Unit/Lesson Plans</h1>
                 </div>
                 <div class="content-section">
+                    <div class="documents pt-5">
+                        <ul class="nav nav-pills justify-content-center">
+                            <li class="nav-item p-2">
+                                <button id="music-select" type="button" onclick="myFunction(this)" class="btn btn-primary btn-lg">Music Courses <i class="fas fa-music"></i></button>
+                            </li>
+                            <li class="nav-item p-2">
+                                <button id="history-select" type="button" onclick="myFunction(this)" class="btn btn-primary btn-lg">History Courses <i class="fas fa-landmark"></i></button>
+                            </li>
+                            <li class="nav-item p-2">
+                                <div class="input-group mb-3">
+                                    <select id="grade-select" class="form-select form-control-lg" aria-label="Default select example" onchange="myFunction(this)">
+                                        <option value="7,8,9,10,11,12" selected>All Grades</option>
+                                        <option value="7,8">Elementary School: (7-8)</option>
+                                        <option value="9,10,11,12">High School: (9-12)</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="documents row justify-content-center">
-                        <div id="baroque-music-history" class="ml-2">
+
+                        <div id="baroque-music-history" class="ml-2 music-course grade-9 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Baroque Music History</strong>
+                                        <strong class="align-self-center">Music History: The Baroque Period</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
-                                            <span class="badge grade9-badge">Grade: 9</span>
-                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 9</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Learning about Baroque stuff.
+                                            In this lesson, students learn about the music during the Baroque era. We study great composers like J.S Bach and learn what makes this type of music Unique
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Baroque_Music_History.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-history-baroque-period-slides.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="renaissance-music-history" class="ml-2">
+                        <div id="renaissance-music-history" class="ml-2 music-course grade-9 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Renaissance Music History</strong>
+                                        <strong class="align-self-center">Music History: The Renaissance Period</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
-                                            <span class="badge grade9-badge">Grade: 9</span>
-                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 9</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Learning about Renaissance stuff.
+                                            In this lesson, students learn about the Gregorian chance that was extremely popular in the Medieval era. Many of which are still used today.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Renaissance_Music_History.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-history-renaissance-period.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="music-intervals" class="ml-2">
+                        <div id="music-intervals" class="ml-2 music-course grade-9 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Music Intervals</strong>
+                                        <strong class="align-self-center">Music Lesson: Music Intervals</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge unitPlan-badge">Type: Unit Plan</span>
-                                            <span class="badge grade9-badge">Grade: 9</span>
-                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 9</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Grade 9 theory program
+                                            In this unit, students learn how to identify all the various kinds of intervals in music. This unit tasks advantage of scaffolding knowledge to help students learn topics faster.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Music_Intervals.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-lesson-intervals-unit-plan.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="major-scales" class="ml-2">
+                        <div id="major-scales" class="ml-2 music-course grade-10 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Major Scales</strong>
+                                        <strong class="align-self-center">Music Lesson: Major Scales</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
-                                            <span class="badge grade10-badge">Grade: 10</span>
-                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 10</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Students will be able to identify a major scale by sound and seeing it notated.
+                                            In this lesson, students learn about the foundation of music making and composition. With a very fun activity to go along with it.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Major_Scales.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-lesson-major-scales.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="chamber-music" class="ml-2">
+                        <div id="chamber-music" class="ml-2 music-course grade-11 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Chamber Music</strong>
+                                        <strong class="align-self-center">Music History: Chamber Music</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge unitPlan-badge">Type: Unit Plan</span>
-                                            <span class="badge grade11-badge">Grade: 11</span>
-                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 11</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Identify some famous small ensemble pieces throughout history.
+                                            In this unit, students will have the opportunity to practice being in a small ensemble with their peers. This unit has some lessons but most of the time is spent practicing with their peers and getting reviews from the teacher.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Chamber_Music.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-history-chamber-music-unit-plan.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="chamber-ensembles-history" class="ml-2">
+                        <div id="chamber-ensembles-history" class="ml-2 music-course grade-10 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Chamber Ensembles History</strong>
+                                        <strong class="align-self-center">Music History: Chamber Music Small Ensembles</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
-                                            <span class="badge grade10-badge">Grade: 10</span>
-                                            <span class="badge music-badge">Music <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 10</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Identify some famous small ensemble pieces throughout history.
+                                            This lesson goes along with the Chamber Music Unit, but focuses on specifically the history of chamber ensembles during the various eras.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Chamber_Ensembles_History.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-history-chamber-music-small-ensembles.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="fort-york-history" class="ml-2">
+                        <div id="fort-york-history" class="ml-2 history-course grade-7 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Fort York History</strong>
+                                        <strong class="align-self-center">Canadian History: Fort York</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
-                                            <span class="badge grade7-badge">Grade: 7</span>
-                                            <span class="badge history-badge">History <i class="fas fa-landmark"></i></span>
+                                            <span class="badge grade-badge">Grade: 7</span>
+                                            <span class="badge subject-badge">History <i class="fas fa-landmark"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            Investigate elements of Fort York and discover various artifacts that were used here during the War of 1812.
+                                            This lesson plan is based on a field trip to Fort York In Toronto. Students will be given a scavenger hunt activity and need to search for specific items inside the fort.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Fort_York_History.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/canadian-history-fort-york.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="ring-of-fire-dynamics" class="ml-2">
+                        <div id="ring-of-fire-dynamics" class="ml-2 music-course grade-10 grade-11 school-course" style="display: block;">
                             <div class="col-auto">
                                 <div class="card mb-3 mt-3 document-card">
                                     <div class="card-header">
-                                        <strong class="align-self-center">Ring Of Fire Dynamics</strong>
+                                        <strong class="align-self-center">Music Lesson: Ring Of Fire Dynamics</strong>
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title">
                                             <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
-                                            <span class="badge grade10-badge">Grade: 10</span>
-                                            <span class="badge grade11-badge">Grade: 11</span>
-                                            <span class="badge music-badge">History <i class="fas fa-music"></i></span>
+                                            <span class="badge grade-badge">Grade: 10</span>
+                                            <span class="badge grade-badge">Grade: 11</span>
+                                            <span class="badge subject-badge">Music <i class="fas fa-music"></i></span>
                                         </h6>
                                         <p class="card-text">
-                                            By the end of this lesson students will be able to play dynamics and Crescendos and Decrescendos.
+                                            This lesson focuses on an easy song for a large ensemble Johnny Cash’s Ring of Fire. Although simple, this song benefits greatly from added dynamics. Dynamics that are easy to do but amplify the sound.
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-secondary btn-m" href="./static/documents/Ring_Of_Fire_Dynamics.pdf" role="button">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/music-lesson-ring-of-fire-dynamics.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="history-of-canadian-healthcare" class="ml-2 history-course grade-10 school-course" style="display: block;">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Canadian History: Health Care System</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade-badge">Grade: 10</span>
+                                            <span class="badge subject-badge">History <i class="fas fa-landmark"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            By the end of this lesson students will be able to understand some key reasons our health care system is struggling right now.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/canadian-history-healthcare-system.pdf" role="button">
+                                            Download PDF <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="canadian-world-war-two" class="ml-2 history-course grade-10 school-course" style="display: block;">
+                            <div class="col-auto">
+                                <div class="card mb-3 mt-3 document-card">
+                                    <div class="card-header">
+                                        <strong class="align-self-center">Canadian History: World War II</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <span class="badge lessonPlan-badge">Type: Lesson Plan</span>
+                                            <span class="badge grade-badge">Grade: 10</span>
+                                            <span class="badge subject-badge">History <i class="fas fa-landmark"></i></span>
+                                        </h6>
+                                        <p class="card-text">
+                                            By the end of this lesson students will learn some basic facts about the war, as well as how it started.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-secondary btn-m" href="./static/documents/canadian-history-wwii.pdf" role="button">
                                             Download PDF <i class="fas fa-download"></i>
                                         </a>
                                     </div>
@@ -290,13 +364,66 @@
                     </div>
                 </div>
             </div>
-            <div id="resume"  class="header-section">
-                <h1 class="header-text">Resume</h1>
-            </div>
-            <div class="content-section">
-
-                Resume Stuff
-            </div>
         </div>
+        <script>
+            function myFunction(element) {
+                if (element.id == 'music-select' || element.id == 'history-select') {
+                    if (element.classList.contains("btn-primary")) {
+                        element.classList.remove("btn-primary");
+                        element.classList.add("btn-light");
+                        setCourseVisibility(element.id, false);
+                    } else {
+                        element.classList.remove("btn-light");
+                        element.classList.add("btn-primary");
+                        setCourseVisibility(element.id, true);
+                    }
+                } else if (element.id == 'grade-select') {
+                    console.log(element.value);
+                    updateGradeSelection(element.value);
+                } else {
+                    console.error("ERROR: INVALID USE OF myFunction()");
+                }
+            }
+            function setCourseVisibility(selector_id, display_element) {
+                var class_name;
+                if (selector_id == 'music-select') {
+                    class_name = 'music-course';
+                } else if  (selector_id == 'history-select') {
+                    class_name = 'history-course';
+                } else {
+                    class_name = 'BOGUS';
+                }
+                var courses = document.getElementsByClassName(class_name);
+                for (let i = 0; i < courses.length; i++) {
+                    if (display_element) {
+                        courses[i].style.display = 'block';
+                    } else {
+                        courses[i].style.display = 'none';
+                    }
+                }
+            }
+            function updateGradeSelection(element) {
+                let grades = element.split(",");
+                let grade_tags = [];
+                for (let i = 0; i < grades.length; i++) {
+                    grade_tags.push("grade-" + grades[i]);
+                }
+                let courses = document.getElementsByClassName("school-course");
+                for (let i = 0; i < courses.length; i++) {
+                    for (let j = 0; j < grade_tags.length; j++) {
+                        console.log(grade_tags[j]);
+                        if (courses[i].classList.contains(grade_tags[j])) {
+                            if (courses[i].style.display == 'none' || courses[i].style.display == 'block') {
+                                courses[i].style.display = 'block';
+                                break;
+                            }
+                        }
+                        else {
+                            courses[i].style.display = 'none';
+                        }
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
