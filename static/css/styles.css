@@ -25,6 +25,17 @@
 }
 .tertiary-theme-font-color { color: #594848; }
 
+
+.website-tiny{font-size:10px!important;}
+.website-small{font-size:12px!important;}
+.website-medium{font-size:15px!important;}
+.website-large{font-size:18px!important;}
+.website-xlarge{font-size:24px!important;}
+.website-xxlarge{font-size:36px!important;}
+.website-xxxlarge{font-size:48px!important;}
+.website-jumbo{font-size:64px!important;}
+.centered{ text-align: center; }
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/music-chalkboard.jpg);
     top:0;
